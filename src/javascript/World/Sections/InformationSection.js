@@ -89,19 +89,19 @@ export default class InformationSection
         // Options
         this.links.options = [
             {
-                href: 'https://twitter.com/bruno_simon/',
+                href: 'https://x.com/NisargUpadhya20',
                 labelTexture: this.resources.items.informationContactTwitterLabelTexture
             },
             {
-                href: 'https://github.com/brunosimon/',
+                href: 'https://github.com/NisargUpadhyayIITJ',
                 labelTexture: this.resources.items.informationContactGithubLabelTexture
             },
             {
-                href: 'https://www.linkedin.com/in/simonbruno77/',
+                href: 'https://www.linkedin.com/in/nisarg-upadhyay-156643287/',
                 labelTexture: this.resources.items.informationContactLinkedinLabelTexture
             },
             {
-                href: 'mailto:simon.bruno.77@gmail.com',
+                href: 'mailto:nisarg.prakash.oct2005@gmail.com',
                 labelTexture: this.resources.items.informationContactMailLabelTexture
             }
         ]
