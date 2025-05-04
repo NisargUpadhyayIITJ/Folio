@@ -71,6 +71,7 @@ export default class Resources extends EventEmitter
 
             { name: 'introDevBase', source: './models/intro/dev/base.glb' },
             { name: 'introDevCollision', source: './models/intro/dev/collision.glb' },
+            { name: 'introSubSection', source: './models/intro/static/subsection.png', type: 'texture' },
 
             // Intro
             { name: 'crossroadsStaticBase', source: './models/crossroads/static/base.glb' },

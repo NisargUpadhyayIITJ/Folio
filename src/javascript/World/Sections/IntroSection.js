@@ -25,6 +25,7 @@ export default class IntroSection
         this.setInstructions()
         this.setOtherInstructions()
         this.setTitles()
+        this.setSubSection()
         this.setTiles()
         this.setDikes()
     }
@@ -459,5 +460,49 @@ export default class IntroSection
                 }
             })
         }
+    }
+
+    setSubSection() {
+        this.subSection = {}
+        // position under the letters – tweak these to taste:
+        this.subSection.x = this.x + 0.8
+        this.subSection.y = this.y - 15
+
+        // size multiplier (adjust for your art’s aspect ratio):
+        this.subSection.multiplier = 3
+
+        // plane geometry
+        this.subSection.geometry = new THREE.PlaneGeometry(
+          4 * this.subSection.multiplier,
+          0.5 * this.subSection.multiplier,
+          1, 1
+        )
+
+        // pick up the texture we just loaded
+        this.subSection.texture = this.resources.items.introSubSectionTexture
+        this.subSection.texture.magFilter = THREE.NearestFilter
+        this.subSection.texture.minFilter = THREE.LinearFilter
+
+        // simple alpha‐mapped material
+        this.subSection.material = new THREE.MeshBasicMaterial({
+          transparent: true,
+          alphaMap: this.subSection.texture,
+          color: 0xffffff,
+          depthWrite: false
+        })
+
+        // mesh, positioned & frozen
+        this.subSection.mesh = new THREE.Mesh(
+          this.subSection.geometry,
+          this.subSection.material
+        )
+        this.subSection.mesh.position.set(
+          this.subSection.x,
+          this.subSection.y,
+          0
+        )
+        this.subSection.mesh.matrixAutoUpdate = false
+        this.subSection.mesh.updateMatrix()
+        this.container.add(this.subSection.mesh)
     }
 }
