@@ -150,12 +150,12 @@ export default class InformationSection
     {
         // Set up
         this.activities = {}
-        this.activities.x = this.x + 0
+        this.activities.x = this.x + 1
         this.activities.y = this.y - 10
         this.activities.multiplier = 5.5
 
         // Geometry
-        this.activities.geometry = new THREE.PlaneGeometry(2 * this.activities.multiplier, 1 * this.activities.multiplier, 1, 1)
+        this.activities.geometry = new THREE.PlaneGeometry(1.1 * this.activities.multiplier, 1 * this.activities.multiplier, 1, 1)
 
         // Texture
         this.activities.texture = this.resources.items.informationActivitiesTexture
