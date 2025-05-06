@@ -89,7 +89,7 @@ export default class InformationSection
         // Options
         this.links.options = [
             {
-                href: 'https://x.com/NisargUpadhya20',
+                href: 'https://drive.google.com/file/d/1M8W_IIGqRrP5ZFxJ-uTnDGROrX_NkEbE/view?usp=sharing',
                 labelTexture: this.resources.items.informationContactTwitterLabelTexture
             },
             {
